@@ -2,6 +2,8 @@
 import './App.css';
 import img1 from '../src/img/img1.png'
 import { useEffect, useState } from 'react';
+import LocalForage from './LocalForage';
+import ReadExcell from './ReadExcell';
 
 const colorArr=['red', 'green', 'blue','orange']
 const gift=[
@@ -110,6 +112,8 @@ function giftRandom(rand){
               <h2  style={{marginBottom:'10%'}}> <span style={{ transition:'all 4s ease-in-out'}}>{giftRand.subs}</span>  {giftRand.Gift ?<span style={{ transition:'all 4s ease-in-out'}}>{giftRand.Gift}</span> : '' }  </h2>
              {!giftRand.Gift ? <img style={{width:'100%', transition:'all 4s ease-in-out'}} src='https://acegif.com/wp-content/uploads/gift-5.gif' alt='gift' />: '' }
           </div>
+          <LocalForage />
+          <ReadExcell />
        </div>
        <p>&copy;{new Date().getFullYear()} by Bashir Ahammed</p>
     </div>
